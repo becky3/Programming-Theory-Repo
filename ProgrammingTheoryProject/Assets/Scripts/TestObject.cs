@@ -4,9 +4,13 @@ using UnityEngine;
 using Inheritance;
 using Polymorphism;
 using Encapsulation;
+using Abstraction;
 
 public class TestObject : MonoBehaviour
 {
+    [SerializeField] GameObject sphere;
+    [SerializeField] GameObject cube;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +53,15 @@ public class TestObject : MonoBehaviour
         capusuleObject.ChangeName("newName");
         Debug.Log($"capsule name is {capusuleObject.name}");
 
+        Debug.Log("======================");
+        Debug.Log("Abstraction");
+        Debug.Log("======================");
+
+        Debug.Log("Move the cube");
+        AbstractionWorks.MoveWithLog(cube, new Vector3(5, 5, 5));
+
+        Debug.Log("Move the sphere");
+        AbstractionWorks.MoveWithLog(sphere, new Vector3(-5, -5, -5));
 
 
     }
