@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Inheritance;
 using Polymorphism;
+using Encapsulation;
 
 public class TestObject : MonoBehaviour
 {
@@ -37,6 +38,18 @@ public class TestObject : MonoBehaviour
         animal.Cry();
         dog.Cry();
         cat.Cry();
+
+        Debug.Log("======================");
+        Debug.Log("Encapsulation");
+        Debug.Log("======================");
+
+        var capusuleObject = new CapsuledObject();
+
+        // capusuleObject.name = "newName" // can't access
+        capusuleObject.ChangeName("newName");
+        Debug.Log($"capsule name is {capusuleObject.name}");
+
+
 
     }
 
