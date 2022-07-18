@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Abstraction : MonoBehaviour
+namespace Abstraction 
 {
-    // Start is called before the first frame update
-    void Start()
+    class AbstractionWorks
     {
-        
+        public static void MoveWithLog(GameObject gameObject, Vector3 targetPosition)
+        {
+            var rigitBody = gameObject.GetComponent<Rigidbody>();
+
+            if (rigitBody == null)
+            {
+                Debug.Log("have not rigitBody...");
+                return;
+            }
+
+            var nowPosition = gameObject.transform.position;
+            rigitBody.MovePosition(targetPosition);
+
+            Debug.Log($"move from {nowPosition} to {targetPosition}");
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
