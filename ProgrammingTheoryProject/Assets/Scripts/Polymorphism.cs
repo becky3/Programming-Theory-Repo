@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Polymorphism : MonoBehaviour
+namespace Polymorphism
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    class Animal {
+
+        public virtual void Cry()
+        {
+            Debug.Log("...");
+        }
         
     }
 
-    // Update is called once per frame
-    void Update()
+    class Dog : Animal
     {
-        
+        public override void Cry()
+        {
+            Debug.Log("Bow wow!");
+        }
+    }
+
+    class Cat : Animal
+    {
+        public override void Cry()
+        {
+            Debug.Log("Mew mew!");
+        }
     }
 }

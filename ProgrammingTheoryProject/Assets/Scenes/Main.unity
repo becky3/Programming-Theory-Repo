@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 2118159430}
   - component: {fileID: 2118159429}
   m_Layer: 0
-  m_Name: Inheritance Object
+  m_Name: Test Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
